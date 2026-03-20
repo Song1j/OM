@@ -1,8 +1,6 @@
-#!/Users/wonjong/OM/repo/gurobi_env/bin/python
-# -*- coding: utf-8 -*-
-import re
+#!/Users/wonjong/OM/repo/projects/gurobi_env/bin/python
 import sys
 from jupyter_client.runapp import RunApp
 if __name__ == '__main__':
-    sys.argv[0] = re.sub(r'(-script\.pyw|\.exe)?$', '', sys.argv[0])
+    sys.argv[0] = sys.argv[0].removesuffix('.exe')
     sys.exit(RunApp.launch_instance())
